@@ -1,10 +1,12 @@
 /*
 Below use @import to include one or more Google Fonts
 */
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,700;1,400;1,700&family=Manrope:wght@300;400;500&display=swap');
 
 /*
 Below use @import to include one CSS reset or normalize stylesheet of your choice
 */
+@import 'normalize.css'; 
 
 /*
 Make the embedded svg small enough so it does not to overtake the page
@@ -20,3 +22,4 @@ as needed from the reset or normalize stylesheet
 Refer to README.md for more information
 
 */
+ 
