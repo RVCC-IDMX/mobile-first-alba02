@@ -29,9 +29,9 @@ Refer to README.md for more information
    --main-bg-color:#ECEAE1;
    --header-color:#962776;
    --body-text-color:#000000;
-   --lighter-purple:#E392C9 ;
-   --lighter-orange:#D18A5F;
-   --dark-orange:#D18A5F;
+   --lighter-purple:#f4d7f2 ;
+   --lighter-orange:#e6b799;
+   --dark-orange:#BF5D21;
    --header-font: 'Caudex', serif;
    --header1-size: 7rem;
  
@@ -93,11 +93,16 @@ font-weight:500;
 .container a, 
 nav ul li a{
   color: var(--body-text-color);
-  text-decoration: 2px underline var(--lighter-purple);
+  text-decoration: 2px underline var(--header-color);
 
 }
+
+
 header .container, p{
   margin-block-end: 5rem;
+}
+header .link-github{
+  text-decoration: none;
 }
  header .link-github ,
  nav ul  {
@@ -107,5 +112,33 @@ header .container, p{
  padding-block: 1rem;
  box-shadow: 5px 5px 10px 1px var(--lighter-orange);
 }
+nav ul li{
+  font-size: 1.2rem;
+}
 
+nav ul li a{
+  text-decoration: 3px underline var(--header-color);
+}
+nav ul li a {
+  display: inline-block;
+  position: relative;
+  
+}
 
+nav ul li a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--lighter-orange);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
