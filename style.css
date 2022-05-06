@@ -42,7 +42,7 @@ Refer to README.md for more information
    background-color: var(--main-bg-color);
    line-height: 1.5;
    font-family: 'Manrope', sans-serif;
-   margin: 1.3vh;
+   
   }
 
 .container,
@@ -111,7 +111,7 @@ header .link-github{
  background-color: var(--lighter-purple);
  padding:0.5rem;
  padding-block: 1rem;
- box-shadow: 5px 5px 10px 1px var(--lighter-orange);
+ box-shadow: 4px 5px 1px 1px var(--lighter-orange);
 }
 nav ul li{
   font-size: 1.2rem;
@@ -185,3 +185,100 @@ article#about li::before {
 	left: -10px;
 	transform: translate(-50%, -50%);
 }
+
+h3{
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+#guidelines p{
+  margin-block-end: 1.5rem;
+}
+a.link-guidelines{
+  text-decoration: none;
+  background-color: var(--lighter-purple);
+ padding:0.5rem;
+ padding-block: 1rem;
+ box-shadow: 4px 5px 1px 1px var(--lighter-orange);
+ font-size: 1.2rem;
+ font-weight: 500;
+}
+
+article#guidelines{
+  margin-block-end:4rem ;
+}
+
+ol{
+  border-left:1.5px solid var(--border-underline) ;
+}
+
+#files .container{
+  
+  background-color: var(--lighter-purple);
+  box-shadow: 4px 5px 1px 1px var(--lighter-orange);
+  padding-inline:20px ;
+  padding-block: 5px;
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+#files .container a:after{
+    content: "";
+    display: block;
+    height: 0;
+    width: 1px;
+    line-height: 1.5;
+}
+
+.profile .container {
+  display: grid;
+  justify-items: center;
+  
+ 
+}
+.profile{
+  border-left:solid 1.5px var(--border-underline);
+  margin: 0 0 0 30px;
+  padding:0 10px;
+ 
+}
+
+li.profile-title::marker{
+color:var(--border-underline) ;
+}
+li.profile-author::marker{
+  color:var(--border-underline) ;
+  }
+  li.profile-twitter::marker{
+    color:var(--border-underline) ;
+    }
+    li.profile-website::marker{
+      color:var(--border-underline) ;
+      }
+
+  
+      #styles .container{
+        display: grid;
+        justify-items: center;
+        border: 1px solid var(--header-color);
+        min-height: 20vh;
+        place-content: center;
+        border-radius: 0.5%;
+        padding-inline:2rem;
+        min-width:50vh;
+        padding-block:1.5rem;
+
+      }
+
+      #styles .container .features{
+        line-height: 2;
+      }
+      .page-footer{
+        display: block;
+      }
+      .page-footer .container{
+        box-sizing: content-box;
+        background-color: var(--lighter-purple);
+        padding: 3rem;
+
+      }
