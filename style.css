@@ -45,7 +45,7 @@ Refer to README.md for more information
    background-color: var(--main-bg-color);
    line-height: 1.5;
    font-family: 'Manrope', sans-serif;
- 
+   min-width:40ch ;
   }
   a.skip-link {
     color: #fff;
@@ -62,19 +62,27 @@ Refer to README.md for more information
     overflow: hidden;
 }
 
-.container,
-nav {
+.container
+ {
   max-width: 80ch;
   margin: 10vh auto;
 }
 nav ul{
+  margin-block-start: 2rem;
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(10ch, 1fr));
   list-style: none;
-  padding: none;
-  margin:0;
+  padding-inline:5rem;
   grid-gap:1rem;
+  min-width: 30ch;
+  margin: 3vh auto;
+  max-width: 100%;
 }
+nav ul li{
+  margin-inline: 1.5rem;
+  
+}
+
 header{
   margin-block-start:3.5rem;
   border: 1.5px solid var(--header-color);
@@ -123,16 +131,20 @@ header .container p{
 header .link-github{
   text-decoration: none;
 }
- header .link-github ,
- nav ul  {
-
+ header .link-github{
  background-color: var(--lighter-purple);
  padding:0.5rem;
  padding-block: 1rem;
  box-shadow: 4px 5px 1px 1px var(--lighter-orange);
 }
-nav ul li{
+
+nav ul{
   font-size: var(--nav-font-size);
+  background-color: var(--lighter-purple);
+ padding:0.5rem;
+ padding-block: 1.5rem;
+ box-shadow: 4px 5px 8px 1px var(--lighter-orange);
+ margin-block: 8rem;
 }
 
 nav ul li a{
@@ -173,7 +185,7 @@ blockquote{
   background-color: var(--lighter-purple);
  padding:0.5rem;
  padding-block: 1rem;
- box-shadow: 4px 5px 1px 1px var(--lighter-orange);
+ box-shadow: 4px 5px 8px 1px var(--lighter-orange);
 }
 h2{
   line-height: 1.2;
@@ -221,6 +233,9 @@ a.link-guidelines{
  font-size: var(--nav-font-size);
  font-weight: 500;
 }
+a:not([class]) {
+  text-underline-offset: 0.25em;
+}
 
 article#guidelines{
   margin-block-end:4rem ;
@@ -233,7 +248,7 @@ ol{
 #files .container{
   
   background-color: var(--lighter-purple);
-  box-shadow: 4px 5px 1px 1px var(--lighter-orange);
+  box-shadow: 4px 5px 8px 1px var(--lighter-orange);
   padding-inline:20px ;
   padding-block: 5px;
   line-height: 2;
@@ -280,28 +295,50 @@ li.profile-author::marker{
        
         min-width:50vh;
         padding-block:1.5rem;
-
+        margin-block-end: 10rem;
       }
 
       #styles .container .features{
         line-height: 2;
+      
+      }
+      #styles .container a[class] {
+        background-color: var(--lighter-purple);
+        padding:0.5rem;
+        padding-block: 1rem;
+        box-shadow: 4px 5px 1px 1px var(--lighter-orange);
+      
       }
       .page-footer{
         display: flex;
        
 
       }
-      .page-footer .container{
+      .page-footer {
+        line-height: 2;
         box-sizing: content-box;
         background-color: var(--lighter-purple);
-        padding: 3rem;
-       
-        
-
+        max-width: 100%;
+       min-width: 320px;
+       place-content: center;
+        justify-items: center;
       }
-
+      .page-footer .container{
+        margin: 5vh;
+        
+      }
       .page-footer .container li::marker{
         color:var(--border-underline) 
       }
 
-    
+    /*prefers reduce motion accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
